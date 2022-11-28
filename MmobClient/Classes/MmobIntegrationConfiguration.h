@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *environment;
 @property (nonatomic) NSString *instanceDomain;
 
-
+- (NSMutableDictionary *) addKeysToDictionary: (NSMutableDictionary *) mutableDictionary;
 
 @end
 

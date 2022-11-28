@@ -33,30 +33,23 @@
     
     // Prepare data
     
-    NSDictionary *configuration = @{
-
-        @"cp_id": mmobConfiguration.cpId,
-        @"cp_deployment_id": mmobConfiguration.cpDeploymentId
-    };
-    
+    NSDictionary *configuration = @{};
     NSMutableDictionary *mutableConfiguration = [NSMutableDictionary dictionaryWithDictionary:configuration];
-    
 
     [customerInfo addKeysToDictionary:mutableConfiguration];
+    [mmobConfiguration addKeysToDictionary:mutableConfiguration];
 
     
     NSError *error;
 
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:mutableConfiguration  options:NSJSONWritingPrettyPrinted error:&error];
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    NSLog (@"data %@", jsonString);
-    
-    
+    NSLog(@"@jsonData %@", jsonString);
+
     
     //webview
-//    self.urlPrefix = @"https://client-ef-network.ef-hub.com";
-    NSLog(@"env %@", mmobConfiguration.environment);
+
+    NSLog(@"Mmob loading %@ in instance: %@", mmobConfiguration.environment, mmobConfiguration.instanceDomain);
     self.urlPrefix = [self getURLByEnvironment: mmobConfiguration.environment forInstanceDomain: mmobConfiguration.instanceDomain];
     
     NSString *urlString = [NSString stringWithFormat:@"%@%@", self.urlPrefix , @"/boot"];
@@ -66,13 +59,13 @@
         @"Content-Type" : @"application/json",
         @"Accept" : @"application/json"
     };
-    NSLog (@"data %@", url);
+
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:jsonData];
     [request setAllHTTPHeaderFields:headers];
-//    [request setURL:url];
+    [request setURL:url];
     
     
     WKWebViewConfiguration *webViewConfiguration = [[WKWebViewConfiguration alloc] init];
@@ -81,17 +74,14 @@
     [webViewConfiguration setPreferences:preferences];
     
     
-//    WKWebView *webView = [self.webView initWithFrame:frame configuration:webViewConfiguration];
     self.webView = [[WKWebView alloc] initWithFrame:frame configuration:webViewConfiguration];
-    
     self.webView.navigationDelegate = self;
     self.webView.UIDelegate = self;
     
     
     [self.webView loadRequest:request];
 
-//    self.webView = webView;
-//    [self.view addSubview:webView];
+
     return self.webView;
     
 }
@@ -125,6 +115,8 @@
 
   return nil;
 }
+
+
 //- (void)dealloc {
 //    NSLog(@"Should not dealloc");
 //}

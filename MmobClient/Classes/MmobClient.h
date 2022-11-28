@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MmobClient: NSObject <WKNavigationDelegate>
+@interface MmobClient: UIViewController <WKNavigationDelegate>
 
 
 -(WKWebView *)getClientWithFrame:(CGRect)frame withCustomerInfo:(MmobCustomerInfo*)customerInfo withConfiguration:(MmobIntegrationConfiguration*)mmobConfiguration;
