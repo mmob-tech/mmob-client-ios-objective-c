@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MmobClient_Tests' do
+  pod 'MmobClient', :path => '../'
+  
+  
+end

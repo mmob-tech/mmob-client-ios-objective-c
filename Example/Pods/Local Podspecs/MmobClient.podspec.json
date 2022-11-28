@@ -1,0 +1,22 @@
+{
+  "name": "MmobClient",
+  "version": "0.1.0",
+  "summary": "A short description of MmobClient.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/blaiprat/MmobClient",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "blaiprat": "blai@mmob.com"
+  },
+  "source": {
+    "git": "https://github.com/blaiprat/MmobClient.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MmobClient/Classes/**/*"
+}
