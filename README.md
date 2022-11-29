@@ -1,6 +1,6 @@
 # MmobClient
 
-[![CI Status](https://img.shields.io/travis/blaiprat/MmobClient.svg?style=flat)](https://travis-ci.org/blaiprat/MmobClient)
+[![CI Status](https://img.shields.io/travis/blaiprat/MmobClient.svg?style=flat)](https://travis-ci.org/mmob-tech/mmob-client-ios-objective-c)
 [![Version](https://img.shields.io/cocoapods/v/MmobClient.svg?style=flat)](https://cocoapods.org/pods/MmobClient)
 [![License](https://img.shields.io/cocoapods/l/MmobClient.svg?style=flat)](https://cocoapods.org/pods/MmobClient)
 [![Platform](https://img.shields.io/cocoapods/p/MmobClient.svg?style=flat)](https://cocoapods.org/pods/MmobClient)
@@ -22,7 +22,7 @@ pod 'MmobClient'
 
 ## Author
 
-blaiprat, blai@mmob.com
+Blai Pratdesaba, blai@mmob.com
 
 ## License
 

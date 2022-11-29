@@ -18,17 +18,23 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+# MMOB, Embedded Finance made easy
+
+Integrate complementary products and services that drive conversion and unlock new revenue streams - seamlessly within your own digital channels.
+
+
+The MMOB client on iOs will help creating and managing your own integration views
+
                        DESC
 
-  s.homepage         = 'https://github.com/blaiprat/MmobClient'
+  s.homepage         = 'https://github.com/mmob-tech/mmob-client-ios-objective-c'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'blaiprat' => 'blai@mmob.com' }
-  s.source           = { :git => 'https://github.com/blaiprat/MmobClient.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/mmob-tech/mmob-client-ios-objective-c.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'MmobClient/Classes/**/*'
   
